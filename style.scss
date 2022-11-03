@@ -1,0 +1,442 @@
+$Cyan: hsl(180, 66%, 49%);
+$DarkViolet: hsl(257, 27%, 26%);
+$Red: hsl(0, 87%, 67%);
+$Gray: hsl(0, 0%, 75%);
+$Violet: hsl(257, 7%, 63%);
+$VeryDarkBlue: hsl(255, 11%, 22%);
+$VeryDarkViolet: hsl(260, 8%, 14%);
+$theFont: 'Poppins', sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: $theFont;
+    overflow-x: hidden;
+}
+
+li {
+    list-style: none;
+}
+
+.container {
+    padding: 30px 25px;
+    nav {
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+        align-items: center;
+        
+        ul {
+            position: absolute;
+            background-color: $DarkViolet;
+            top: 100%;
+            width: 100%;
+            border-radius: 5px;
+            text-align: center;
+            gap: 30px;
+            display: flex;
+            flex-direction: column;
+            font-weight: 700;
+            padding: 40px 20px;
+            display: none;
+            
+            div {
+                display: flex;
+                flex-direction: column;
+                gap: 30px;
+                
+                li {
+                    cursor: pointer;
+                    
+                    a {
+                        color: white;
+                        text-transform: capitalize;
+                        text-decoration: none;
+                        transition: 0.3s;
+                        &:hover{
+                            color: $Cyan;
+                        }
+                    }
+                    
+                    .signup {
+                        padding: 10px 100px;
+                        border-radius: 100px;
+                        background-color: $Cyan;
+                        &:hover{
+                            color: white;
+                            opacity: 0.7;
+                        }
+                    }
+                    
+                }
+                
+            }
+            
+        }
+        
+        .burger,
+        .close {
+            user-select: none;
+            cursor: pointer;
+            color: $Violet;
+        }
+    }
+
+    .hero {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        img {
+            width: 150%;
+        }
+
+        .heroData {
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            align-items: center;
+
+            h1 {
+                font-size: 3rem;
+                line-height: 60px;
+            }
+
+            p {
+                color: $Gray;
+                word-spacing: 4px;
+                line-height: 30px;
+                font-size: 1.2rem;
+            }
+            button{
+                transition: 0.3s;
+            }
+            button:hover{
+                opacity: 0.7;
+            }
+        }
+    }
+
+    .shortnerContainer {
+        background-color: $DarkViolet;
+        text-align: center;
+        padding: 20px;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        background-image: url(./images/bg-shorten-mobile.svg);
+        background-repeat: no-repeat;
+        background-position: top right;
+        background-size: 50%;
+        margin-block: 50px;
+        z-index: 2;
+        position: relative;
+        .shortner {
+            padding: 15px;
+            border: none;
+            outline: none;
+            border-radius: 5px;
+
+            &::placeholder {
+                font-family: $theFont;
+                color: $DarkViolet;
+            }
+        }
+
+        .shortenIt {
+            padding: 10px;
+            background-color: $Cyan;
+            border: none;
+            outline: none;
+            color: white;
+            font-family: $theFont;
+            border-radius: 5px;
+            font-weight: 700;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: 0.3s;
+            &:hover{
+                background-color: hsl(180, 93%, 73%);
+            }
+        }
+    }
+    .results{
+        .result{
+            display: flex;
+            justify-content: space-between;
+            flex-direction: column;
+            gap: 10px;
+            padding: 10px;
+    
+            background-color: rgb(255, 255, 255);
+            border-radius: 5px;
+            z-index: 2;
+            position: relative;
+            .was{
+                border-bottom: 1px solid gray;
+                padding-bottom: 10px;
+            }
+            .is{
+                color: $Cyan;
+            }
+            .copy{
+                background-color: $Cyan;
+                border: none;
+                outline: none;
+                padding: 10px;
+                border-radius: 5px;
+                color: white;
+                font-weight: 700;
+                font-family: $theFont;
+                cursor: pointer;
+            }
+        }
+    }
+
+    .statistics {
+        background-color: rgba(216, 216, 216, 0.5);
+        box-shadow: 0 0 0 30px rgba(216, 216, 216, 0.5);
+        margin-top: -100px;
+        z-index: -1;
+        padding: 100px 0 100px 0;
+        text-align: center;
+        h1 {
+            font-size: 2rem;
+        }
+
+        p {
+            color: $Violet;
+
+        }
+
+        .cardsContainer {
+            position: relative;
+            &::before{
+                content: '';
+                width: 20px;
+                height: 1000px;
+                background-color: $Cyan;
+                position: absolute;
+                z-index: -1;
+                left: 50%;
+                transform: translate(-50%);
+            }
+            .card {
+                margin-top: 100px;
+                background-color: white;
+                padding: 0 30px 30px 30px;
+                border-radius: 5px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 20px;
+                .image {
+                    background-color: $DarkViolet;
+                    border-radius: 100px;
+                    width: 80px;
+                    height: 80px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    padding: 10px 15px;
+                    margin-top: -40px;
+                }
+
+                h1 {
+                    font-size: 1.5rem;
+                }
+
+                p {
+                    font-size: large;
+                }
+            }
+        }
+    }
+
+
+}
+
+
+.getStarted {
+    border: none;
+    outline: none;
+    padding: 10px 30px;
+    background-color: $Cyan;
+    color: white;
+    font-weight: 700;
+    font-family: $theFont;
+    border-radius: 100px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: 0.3s;
+    &:hover{
+        background-color: hsl(180, 93%, 73%);
+    }
+}
+
+
+.boost {
+    background-color: $DarkViolet;
+    color: white;
+    text-align: center;
+    padding: 100px 10px;
+    h1{
+        font-size: 2rem;
+    }
+}
+
+footer{
+    background-color: $VeryDarkViolet;
+    color: white;
+    display: grid;
+    flex-direction: column;
+    gap: 40px;
+    place-items: center;
+    padding-block: 50px;
+    text-align: center;
+    ul{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        .header{
+            font-weight: 700;
+            color: white;
+        }
+        li{
+            color: $Gray;
+            cursor: pointer;
+            transition: 0.3s;
+            &:hover{
+                color: $Cyan;
+            }
+        }
+    }
+    .socialIcons{
+        display: flex;
+        gap: 30px;
+        cursor: pointer;
+}
+}
+
+.error{
+    color: $Red;
+    text-align: left;
+    font-style: italic;
+    display: none;
+}
+
+
+
+
+
+
+
+
+@media screen and (min-width:1000px) {
+    hr{
+        display: none;
+    }
+    .container{
+        padding: 50px 150px;
+        nav{
+            gap: 20px;
+            align-items: center;
+            ul{
+                display: flex;
+                flex-direction: row;
+                padding: 0;
+                margin: 0;
+                position: static;
+                justify-content: space-between;
+                background-color: transparent;
+                div{
+                    flex-direction: row;
+                    position: static;
+                    li{
+                        a{
+                            color: $Gray;
+                        }
+                        .signup{
+                            color: white;
+                            padding: 10px 30px;
+
+                        }
+                    }
+                }
+            }
+            .burger{
+                display: none;
+            }
+        }
+        .hero{
+            flex-direction: row-reverse;
+            align-items: center;
+            justify-content: space-between;
+            img{
+                margin-right: -300px;
+                width: 100%;
+                margin-top: 50px;
+            }
+            .heroData{
+                text-align: left;
+                align-items: flex-start;
+            }
+        }
+        .shortnerContainer{
+            padding: 50px;
+            flex-direction: row;
+            gap: 20px;
+            .shortner{
+                display: flex;
+                flex-grow: 1;
+            }
+            .shortenIt{
+                padding: 10px 30px;
+            }
+        }
+        .statistics{
+            box-shadow: 0 0 0 150px rgba(216, 216, 216, 0.5);
+            margin-top: 80px;
+            padding-top: 0;
+            .cardsContainer{
+                display: flex;
+                gap: 30px;
+                &::before{
+                    width: 1000px;
+                    height: 20px;
+                    top: 60%;
+                }
+                .card:nth-child(2){
+                    margin-top: 100px;
+                    position: relative;
+                    top: 50px;
+                }
+                .card:nth-child(3){
+                    position: relative;
+                    top: 100px;
+                }
+            }
+        }
+    }
+    .boost{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+    
+    footer{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+        padding-inline: 100px;
+    }
+}
