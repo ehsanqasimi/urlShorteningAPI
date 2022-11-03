@@ -16,6 +16,7 @@ li {
 
 .container {
   padding: 30px 25px;
+  overflow-x: hidden;
 }
 .container nav {
   display: flex;
