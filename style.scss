@@ -25,12 +25,13 @@ li {
 
 .container {
     padding: 30px 25px;
+
     nav {
         display: flex;
         justify-content: space-between;
         position: relative;
         align-items: center;
-        
+
         ul {
             position: absolute;
             background-color: $DarkViolet;
@@ -44,41 +45,43 @@ li {
             font-weight: 700;
             padding: 40px 20px;
             display: none;
-            
+
             div {
                 display: flex;
                 flex-direction: column;
                 gap: 30px;
-                
+
                 li {
                     cursor: pointer;
-                    
+
                     a {
                         color: white;
                         text-transform: capitalize;
                         text-decoration: none;
                         transition: 0.3s;
-                        &:hover{
+
+                        &:hover {
                             color: $Cyan;
                         }
                     }
-                    
+
                     .signup {
                         padding: 10px 100px;
                         border-radius: 100px;
                         background-color: $Cyan;
-                        &:hover{
+
+                        &:hover {
                             color: white;
                             opacity: 0.7;
                         }
                     }
-                    
+
                 }
-                
+
             }
-            
+
         }
-        
+
         .burger,
         .close {
             user-select: none;
@@ -114,10 +117,12 @@ li {
                 line-height: 30px;
                 font-size: 1.2rem;
             }
-            button{
+
+            button {
                 transition: 0.3s;
             }
-            button:hover{
+
+            button:hover {
                 opacity: 0.7;
             }
         }
@@ -138,6 +143,7 @@ li {
         margin-block: 50px;
         z-index: 2;
         position: relative;
+
         .shortner {
             padding: 15px;
             border: none;
@@ -162,31 +168,36 @@ li {
             font-size: 1.2rem;
             cursor: pointer;
             transition: 0.3s;
-            &:hover{
+
+            &:hover {
                 background-color: hsl(180, 93%, 73%);
             }
         }
     }
-    .results{
-        .result{
+
+    .results {
+        .result {
             display: flex;
             justify-content: space-between;
             flex-direction: column;
             gap: 10px;
             padding: 10px;
-    
+
             background-color: rgb(255, 255, 255);
             border-radius: 5px;
             z-index: 2;
             position: relative;
-            .was{
+
+            .was {
                 border-bottom: 1px solid gray;
                 padding-bottom: 10px;
             }
-            .is{
+
+            .is {
                 color: $Cyan;
             }
-            .copy{
+
+            .copy {
                 background-color: $Cyan;
                 border: none;
                 outline: none;
@@ -207,6 +218,7 @@ li {
         z-index: -1;
         padding: 100px 0 100px 0;
         text-align: center;
+
         h1 {
             font-size: 2rem;
         }
@@ -218,7 +230,8 @@ li {
 
         .cardsContainer {
             position: relative;
-            &::before{
+
+            &::before {
                 content: '';
                 width: 20px;
                 height: 1000px;
@@ -228,6 +241,7 @@ li {
                 left: 50%;
                 transform: translate(-50%);
             }
+
             .card {
                 margin-top: 100px;
                 background-color: white;
@@ -237,6 +251,7 @@ li {
                 flex-direction: column;
                 align-items: center;
                 gap: 20px;
+
                 .image {
                     background-color: $DarkViolet;
                     border-radius: 100px;
@@ -276,7 +291,8 @@ li {
     letter-spacing: 1px;
     cursor: pointer;
     transition: 0.3s;
-    &:hover{
+
+    &:hover {
         background-color: hsl(180, 93%, 73%);
     }
 }
@@ -287,12 +303,13 @@ li {
     color: white;
     text-align: center;
     padding: 100px 10px;
-    h1{
+
+    h1 {
         font-size: 2rem;
     }
 }
 
-footer{
+footer {
     background-color: $VeryDarkViolet;
     color: white;
     display: grid;
@@ -301,31 +318,51 @@ footer{
     place-items: center;
     padding-block: 50px;
     text-align: center;
-    ul{
+
+    ul {
         display: flex;
         flex-direction: column;
         gap: 10px;
-        .header{
+
+        .header {
             font-weight: 700;
             color: white;
         }
-        li{
+
+        li {
             color: $Gray;
             cursor: pointer;
             transition: 0.3s;
-            &:hover{
+
+            &:hover {
                 color: $Cyan;
             }
         }
     }
-    .socialIcons{
+
+    .socialIcons {
         display: flex;
         gap: 30px;
         cursor: pointer;
-}
+    }
+
+    .attribution {
+        position: absolute;
+        bottom: 0;
+        font-size: .8rem;
+        text-align: center;
+        left: 50%;
+        transform: translate(-50%);
+
+        a {
+            color: gray;
+        }
+    }
+
+    position: relative;
 }
 
-.error{
+.error {
     color: $Red;
     text-align: left;
     font-style: italic;
@@ -340,15 +377,18 @@ footer{
 
 
 @media screen and (min-width:1000px) {
-    hr{
+    hr {
         display: none;
     }
-    .container{
+
+    .container {
         padding: 50px 150px;
-        nav{
+
+        nav {
             gap: 20px;
             align-items: center;
-            ul{
+
+            ul {
                 display: flex;
                 flex-direction: row;
                 padding: 0;
@@ -356,14 +396,17 @@ footer{
                 position: static;
                 justify-content: space-between;
                 background-color: transparent;
-                div{
+
+                div {
                     flex-direction: row;
                     position: static;
-                    li{
-                        a{
+
+                    li {
+                        a {
                             color: $Gray;
                         }
-                        .signup{
+
+                        .signup {
                             color: white;
                             padding: 10px 30px;
 
@@ -371,72 +414,98 @@ footer{
                     }
                 }
             }
-            .burger{
+
+            .burger {
                 display: none;
             }
         }
-        .hero{
+
+        .hero {
             flex-direction: row-reverse;
             align-items: center;
             justify-content: space-between;
-            img{
+
+            img {
                 margin-right: -300px;
                 width: 100%;
                 margin-top: 50px;
             }
-            .heroData{
+
+            .heroData {
                 text-align: left;
                 align-items: flex-start;
             }
         }
-        .shortnerContainer{
+
+        .shortnerContainer {
             padding: 50px;
             flex-direction: row;
             gap: 20px;
-            .shortner{
+
+            .shortner {
                 display: flex;
                 flex-grow: 1;
             }
-            .shortenIt{
+
+            .shortenIt {
                 padding: 10px 30px;
             }
         }
-        .statistics{
+
+        .statistics {
             box-shadow: 0 0 0 150px rgba(216, 216, 216, 0.5);
             margin-top: 80px;
             padding-top: 0;
-            .cardsContainer{
+
+            .cardsContainer {
                 display: flex;
                 gap: 30px;
-                &::before{
+
+                &::before {
                     width: 1000px;
                     height: 20px;
                     top: 60%;
                 }
-                .card:nth-child(2){
+
+                .card:nth-child(2) {
                     margin-top: 100px;
                     position: relative;
                     top: 50px;
                 }
-                .card:nth-child(3){
+
+                .card:nth-child(3) {
                     position: relative;
                     top: 100px;
                 }
             }
         }
     }
-    .boost{
+
+    .boost {
         display: flex;
         flex-direction: column;
         align-items: center;
         gap: 30px;
     }
-    
-    footer{
+
+    footer {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
         align-items: flex-start;
         padding-inline: 100px;
+    }
+
+    .attribution {
+        position: absolute;
+        bottom: 0;
+        font-size: 1.5rem;
+        text-align: center;
+        left: 50%;
+        transform: translate(-50%);
+
+        a {
+            color: gray;
+        }
     }
 }

@@ -273,6 +273,7 @@ footer {
   place-items: center;
   padding-block: 50px;
   text-align: center;
+  position: relative;
 }
 footer ul {
   display: flex;
@@ -295,6 +296,17 @@ footer .socialIcons {
   display: flex;
   gap: 30px;
   cursor: pointer;
+}
+footer .attribution {
+  position: absolute;
+  bottom: 0;
+  font-size: 0.8rem;
+  text-align: center;
+  left: 50%;
+  transform: translate(-50%);
+}
+footer .attribution a {
+  color: gray;
 }
 
 .error {
@@ -399,5 +411,16 @@ footer .socialIcons {
     justify-content: space-between;
     align-items: flex-start;
     padding-inline: 100px;
+  }
+  .attribution {
+    position: absolute;
+    bottom: 0;
+    font-size: 1.5rem;
+    text-align: center;
+    left: 50%;
+    transform: translate(-50%);
+  }
+  .attribution a {
+    color: gray;
   }
 }/*# sourceMappingURL=style.css.map */
